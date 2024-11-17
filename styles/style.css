@@ -17,8 +17,9 @@
 html {
     scroll-behavior: smooth;
  }
- a {
+ button , a {
     text-decoration: none; /* Elimina el subrayado */
+    cursor: pointer;
  }
 
 
@@ -43,9 +44,13 @@ body{
     font-weight: 600;
     color:var(--color-terciario);
     text-decoration: none;
+    transition: transform 0.3s ease;
 
 }
-
+.header-menu-enlace:hover{
+    transform: scale(1.05);
+   color: var(--color-hover);
+}
 
 
 /*PResentacion */
@@ -120,8 +125,9 @@ body{
 }
 
 
-.presentacion-enlace:hover{
+.presentacion-enlace:hover, .contacto__boton:hover, .proyecto_enlace:hover{
     background-color: var(--color-hover);
+
 }
 
 
@@ -193,6 +199,9 @@ ul {
     background-color: var(--color-hover);
     width: 500px;
     text-decoration: none;
+}
+.contacto__campo:hover{
+    background-color: var(--color-primario);
 }
 .contacto__boton{
     width: 300px;
@@ -269,13 +278,17 @@ ul {
 }
 
 .footer-btn-home{
+    display: inline-block;
     font-family: var(--fuente-monserrat); 
     font-size: 1.5rem;
     font-weight: 600;
     color:var(--color-primario);
-    text-decoration: none;
+    transition: transform 0.3s ease;
 }
-
+.footer-btn-home:hover{
+    transform: scale(1.05);
+    color: var(--color-hover);
+}
 @media (max-width: 600px ){
     .header-menu{
         display: flex;
