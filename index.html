@@ -107,12 +107,23 @@
     <!-- Sección de Contacto -->
     <section class="contacto" id="contacto">
             <h2 class="contacto__titulo">Contacto</h2>
-            <form action="https://formspree.io/f/xeoqzzrp" method="POST" class="contacto__formulario">
+            <form action="https://formspree.io/f/xeoqzzrp" method="POST" class="contacto__formulario" id="contactForm">
                 <input class="contacto__campo" type="text" placeholder="Nombre" name="name">
                 <input class="contacto__campo" type="email" name="email" placeholder="Correo Electrónico">
                 <textarea name="message" class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
                 <button class="contacto__boton" type="submit">Enviar mensaje</button>
             </form>
+            <script>
+              const form = document.getElementById('contactForm');
+            
+              form.addEventListener('submit', function (e) {
+                // Deja que el formulario se envíe normalmente
+                setTimeout(() => {
+                  // Una vez enviado, vacía los campos
+                  form.reset();
+                }, 1000); // Ajusta el tiempo si es necesario
+              });
+            </script>
 
        
     </section>
